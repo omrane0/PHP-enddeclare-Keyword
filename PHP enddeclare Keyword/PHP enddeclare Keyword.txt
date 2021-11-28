@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$count = 0;
+function example() {
+  global $count;
+  $count++;
+  echo "$count instructions executed<br>";
+}
+register_tick_function('example');
+
+declare(ticks=1):
+  $cars = ["Ford", "Volvo", "BMW"];
+  foreach($cars as $car) {
+    echo "$car <br>";
+  }
+enddeclare;
+?>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+1 instructions executed
+Ford
+2 instructions executed
+Volvo
+3 instructions executed
+BMW
+4 instructions executed
+5 instructions executed
